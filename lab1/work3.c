@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main () {
-    int num;
-    int num2;
+    int num, num2;
     printf("Введите число: ");
     scanf("%d", &num);
     printf("В восьмеричной системе счисления: %o\n", num);
