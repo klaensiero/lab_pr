@@ -4,10 +4,12 @@ int main() {
     int number;
     printf("Введите число: ");
     scanf("%d", &number);
-    while ((number >= 20) && (number <= 30)) {
-        printf("Попал в диапазон\n");
-        return 0;
-    }
-    printf("Не попал в диапазон\n");
+    long res;
+    int r=20;
+    int l=30;
+    long a=(r-number) & 2147483648;
+    long b=(number-l) & 2147483648;
+    res=a+b;
+    printf("%d\n", !!res);
     return 0;
 } 
