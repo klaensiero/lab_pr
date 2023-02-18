@@ -1,4 +1,6 @@
+#include <iostream>
 #include "work1.h"
+using namespace std;
 int main() {
     Complex_number comp = {2.0, 3.0};
     cout << "Комплексное число до умножения: " << comp.real << " + " << comp.img << "i" << "\n";
