@@ -8,23 +8,25 @@ class Complex_number {
         double real;
         double img;
 };
+class ComplexNumber {
+   public:
+      double real_part, img_part;
+      ComplexNumber(): real_part(0), img_part(0) {}
+      ComplexNumber(double r, double i) {
+         this->real_part = r;
+         this->img_part = i;
+      }
 
-class Complex_nums { 
-public: 
-    double real; 
-    double imaginary; 
-
-public: 
-    Complex(int r = 0, int i = 0) 
-    { 
-        real = r;
-        imaginary = i;
-    }
-    void multiply(Complex &c2, Complex &c3) { 
-       c3.real = (real*c2.real - imaginary*c2.imaginary); 
-       c3.imaginary = (real*c2.imaginary + imaginary*c2.real); 
-    }
+      void multiply(ComplexNumber &comp2);
+      
 };
+
+
+void ComplexNumber::multiply(ComplexNumber &comp2) {
+      this->real_part = (this->real_part * comp2.real_part) - (this->img_part * comp2.img_part);
+      this->img_part = (this->real_part * comp2.img_part) + (this->img_part * comp2.real_part);
+}
+
 void swap_ref (int &x, int &y);
 void multiply_ref(Complex_number &x, double number);
 void shift_ref(Point &c, int x, int y);

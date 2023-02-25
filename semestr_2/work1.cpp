@@ -26,7 +26,11 @@ int main() {
     cin >> x >> y;
     swap_ptr(&x, &y);
     cout << "x = " << x << " y = " << y << "\n";
-    return 0;
+
+    ComplexNumber c3(5, 4);
+    ComplexNumber c4(2, 3);
+    c3.multiply(c4);
+    cout << "Результат перемножения 2-х комплексных чисел: " << c3.real_part <<" + i"<< c3.img_part << "\n";
 }
 void swap_ptr (int *x, int *y) {
     int temp = *x;
