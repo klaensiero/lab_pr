@@ -1,8 +1,3 @@
-struct Point {
-    int x;
-    int y;
-};
-
 class Complex_number {
     public:
         double real;
@@ -27,12 +22,15 @@ void ComplexNumber::multiply(ComplexNumber &comp2) {
       this->img_part = (this->real_part * comp2.img_part) + (this->img_part * comp2.real_part);
 }
 
-void swap_ref (int &x, int &y);
-void multiply_ref(Complex_number &x, double number);
-void shift_ref(Point &c, int x, int y);
-void trunc_ref(double& num);
-
-void swap_ptr (int *x, int *y);
-void shift_point(Point *c, int x, int y);
 void multiply_point(Complex_number *x, double number);
-void trunc_point(double* num);
+void multiply_ref(Complex_number &x, double number);
+
+void multiply_point(Complex_number *x, double y) {
+    x->real *= y;
+    x->img *= y;
+}
+
+void multiply_ref(Complex_number &x, double y) {
+    x.real *= y;
+    x.img *= y;
+}
