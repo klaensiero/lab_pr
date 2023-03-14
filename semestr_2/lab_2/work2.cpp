@@ -3,7 +3,7 @@
 #include <string>
 #include <exception>
 
-namespace My_Namespace {
+namespace myNamespace {
     class File {
     private:
         std::string filename; 
@@ -13,15 +13,16 @@ namespace My_Namespace {
             this->filename = name;
         }
         
-        void open() {
+        bool open() {
             file.open(filename);
             if (!file.is_open()) {
                 throw std::runtime_error("Failed to open file");
             }
             std::cout << "File opened successfully!" << "\n";
+            return true;
         }
         
-        void close() { 
+        void closeFile() { 
             if (file.is_open()) {
                 file.close();
                 std::cout << "File closed successfully!" << "\n";
@@ -51,20 +52,22 @@ namespace My_Namespace {
             file << f;
         } 
     };
-    
-    class App {
+
+class App {
     public:
         int start() {
             auto file = new File("myfile.txt");
 
             try {
-                file->open();
+                if (!file->open()) {
+                    throw std::exception();
+                }
                 if (file->check()) {
                     file->writeString("Hello World!\n");
                     file->writeInt(20);
                     file->writeString("\n");
                     file->writeFloat(19.87);
-                    file->close();
+                    file->closeFile();
                 }
                 else {
                     throw std::runtime_error("Failed to work with the file");
@@ -80,5 +83,5 @@ namespace My_Namespace {
 }
 
 int main() {
-    return (new My_Namespace::App())->start();
+    return (new myNamespace::App())->start();
 }
