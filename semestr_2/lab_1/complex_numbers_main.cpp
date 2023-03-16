@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
 
-    Complex_number comp = {2.0, 3.0};
-    cout << "Комплексное число до умножения: " << comp.real << " + " << comp.img << "i" << "\n";
+    ComplexNumber comp = {2.0, 3.0};
+    cout << "Комплексное число до умножения: " << comp.real_part << " + " << comp.img_part << "i" << "\n";
     multiply_point(&comp, 4.0);
-    cout << "После умножения: " << comp.real << " + " << comp.img << "i" << "\n";
+    cout << "После умножения: " << comp.real_part << " + " << comp.img_part << "i" << "\n";
     cout << "\n";
 
     ComplexNumber c3(5, 4);
@@ -15,4 +15,14 @@ int main() {
     c3.multiply(c4);
     cout << "Результат перемножения 2-х комплексных чисел: " << c3.real_part <<" + i"<< c3.img_part << "\n";
 
+}
+
+void multiply_point(ComplexNumber *x, double y) {
+    x->real_part *= y;
+    x->img_part *= y;
+}
+
+void multiply_ref(ComplexNumber &x, double y) {
+    x.real_part *= y;
+    x.img_part *= y;
 }

@@ -1,8 +1,3 @@
-class Complex_number {
-    public:
-        double real;
-        double img;
-};
 class ComplexNumber {
    public:
       double real_part, img_part;
@@ -22,15 +17,5 @@ void ComplexNumber::multiply(ComplexNumber &comp2) {
       this->img_part = (this->real_part * comp2.img_part) + (this->img_part * comp2.real_part);
 }
 
-void multiply_point(Complex_number *x, double number);
-void multiply_ref(Complex_number &x, double number);
-
-void multiply_point(Complex_number *x, double y) {
-    x->real *= y;
-    x->img *= y;
-}
-
-void multiply_ref(Complex_number &x, double y) {
-    x.real *= y;
-    x.img *= y;
-}
+void multiply_point(ComplexNumber *x, double number);
+void multiply_ref(ComplexNumber &x, double number);

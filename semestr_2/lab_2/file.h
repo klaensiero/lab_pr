@@ -1,8 +1,3 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <exception>
-
 namespace myNamespace {
     class File {
     private:
@@ -53,35 +48,4 @@ namespace myNamespace {
         } 
     };
 
-class App {
-    public:
-        int start() {
-            auto file = new File("myfile.txt");
-
-            try {
-                if (!file->open()) {
-                    throw std::exception();
-                }
-                if (file->check()) {
-                    file->writeString("Hello World!\n");
-                    file->writeInt(20);
-                    file->writeString("\n");
-                    file->writeFloat(19.87);
-                    file->closeFile();
-                }
-                else {
-                    throw std::runtime_error("Failed to work with the file");
-                }
-            } catch (std::exception const &ex) {
-                std::cerr << "Error: " << ex.what() << "\n";
-                return 1;
-            }
-            
-            return 0;
-        }
-    };
-}
-
-int main() {
-    return (new myNamespace::App())->start();
 }
