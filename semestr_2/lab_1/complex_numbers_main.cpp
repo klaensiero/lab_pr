@@ -17,6 +17,11 @@ int main() {
 
 }
 
+void ComplexNumber::multiply(ComplexNumber &comp2) {
+      this->real_part = (this->real_part * comp2.real_part) - (this->img_part * comp2.img_part);
+      this->img_part = (this->real_part * comp2.img_part) + (this->img_part * comp2.real_part);
+}
+
 void multiply_point(ComplexNumber *x, double y) {
     x->real_part *= y;
     x->img_part *= y;
