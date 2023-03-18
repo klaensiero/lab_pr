@@ -2,17 +2,16 @@
 
 int App::start() {
     auto file = new myNamespace::File("myfile.txt");
-
+   
     try {
-        if (!file->open()) {
-            throw std::exception();
-        }
+        file->open();
+    
         if (file->check()) {
             file->writeString("Hello World!\n");
             file->writeInt(20);
             file->writeString("\n");
             file->writeFloat(19.87);
-            file->closeFile();
+            file->close();
         }
         else {
             throw std::runtime_error("Failed to work with the file");
