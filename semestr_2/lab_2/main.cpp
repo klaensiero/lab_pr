@@ -2,8 +2,8 @@
 #include <fstream>
 #include <string>
 #include <exception>
-#include "file.h"
-#include "app.h"
+#include "file_main.cpp"
+#include "app_main.cpp"
 
 int main() {
     return (new App())->start();
