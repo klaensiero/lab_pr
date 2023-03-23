@@ -1,4 +1,4 @@
-#include "matrix.h"
+#include "Matrix.h"
 
 Matrix::Matrix() {
     for (int i = 0; i < 3; i++) {
@@ -92,12 +92,3 @@ bool Matrix::operator<(const Matrix& other) const {
     }
     return sum1 < sum2;
 }
-
-// void Matrix::show() const {
-//     for (int i = 0; i < 3; i++) {
-//         for (int j = 0; j < 3; j++) {
-//             std::cout << data[i][j] << " ";
-//         }
-//         std::cout << std::endl;
-//     }
-// }

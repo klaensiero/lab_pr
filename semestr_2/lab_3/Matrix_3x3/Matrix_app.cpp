@@ -1,7 +1,7 @@
-#include "matrix_app.h"
+#include "Matrix_app.h"
 
 int App_matrix::start() {
-
+        
         double m1[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         double m2[3][3] = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
         double scalar = 2.0;
@@ -14,33 +14,33 @@ int App_matrix::start() {
         Matrix matrix6 = matrix1 * scalar;
 
         cout << "Matrix 1:" << endl;
-        matrix1.show();
+        ShowMatrix::show(matrix1);
         cout << endl;
 
         cout << "Matrix 2:" << endl;
-        matrix2.show();
+        ShowMatrix::show(matrix2);
         cout << endl;
 
         cout << "Matrix 1 + Matrix 2:" << endl;
-        matrix3.show();
+        ShowMatrix::show(matrix3);
         cout << endl;
 
         cout << "Matrix 1 - Matrix 2:" << endl;
-        matrix4.show();
+        ShowMatrix::show(matrix4);
         cout << endl;
 
         cout << "Matrix 1 * Matrix 2:" << endl;
-        matrix5.show();
+        ShowMatrix::show(matrix5);
         cout << endl;
 
         cout << "Matrix 1 * " << scalar << ":" << endl;
-        matrix6.show();
+        ShowMatrix::show(matrix6);
         cout << endl;
 
         cout << "Matrix 1 == Matrix 2: " << (matrix1 == matrix2) << endl;
         cout << "Matrix 1 > Matrix 2: " << (matrix1 > matrix2) << endl;
         cout << "Matrix 1 < Matrix 2: " << (matrix1 < matrix2) << endl;
 
-    return 0;
+        return 0;
 }
 

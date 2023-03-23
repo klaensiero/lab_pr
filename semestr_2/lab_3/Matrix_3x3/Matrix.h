@@ -15,10 +15,8 @@ public:
     bool operator!=(const Matrix& other) const;
     bool operator>(const Matrix& other) const;
     bool operator<(const Matrix& other) const;
-    // void show() const;
 
-private:
-    double data[3][3];// TODO: use std::vector
+    double data[3][3];
 };
 
 #endif

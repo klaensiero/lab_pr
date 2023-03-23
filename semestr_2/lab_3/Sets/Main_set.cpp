@@ -1,5 +1,5 @@
-#include "set_app.h"
-#include "set.cpp"
+#include "Set_app.cpp"
+#include "Set.cpp"
 int main() {
     return (new App_set())->start();
 }
