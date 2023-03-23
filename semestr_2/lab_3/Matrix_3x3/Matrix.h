@@ -2,11 +2,12 @@
 #define MATRIX_H
 
 #include <iostream>
+#include <vector>
 
 class Matrix {
 public:
     Matrix();
-    Matrix(double m[3][3]);
+    Matrix(std::vector<std::vector<double>> m);
     Matrix operator+(const Matrix& other) const;
     Matrix operator-(const Matrix& other) const;
     Matrix operator*(const Matrix& other) const;
@@ -16,7 +17,7 @@ public:
     bool operator>(const Matrix& other) const;
     bool operator<(const Matrix& other) const;
 
-    double data[3][3];
+    std::vector<std::vector<double>> data;
 };
 
 #endif
