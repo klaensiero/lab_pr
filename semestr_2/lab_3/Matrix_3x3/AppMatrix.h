@@ -1,5 +1,5 @@
 #include "Matrix.h"
-#include "Matrix_show.cpp"
+#include "MatrixOutput.cpp"
 #include <iostream>
 using namespace std;
 

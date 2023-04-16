@@ -1,19 +1,23 @@
-#include "Circle_app.h"
+#include "AppCircle.h"
 #include <vector>
 #include <algorithm>
 
-int App_circle::start() {
+int AppCircle::start() {
 
   vector<Shape*> shapes;
-  while (true) {
-    cout << "Enter radius (or negative number to stop): ";
+  char choice;
+
+  do {
+    cout << "Enter radius: ";
     double radius;
     cin >> radius;
-    if (radius < 0) {
-      break;
-    }
     shapes.push_back(new Circle(radius));
-  }
+    cout << "Do you want to add another circle? (y/n): ";
+    cin >> choice;
+    
+    } while (choice == 'y');
+
+  
   cout << "\n";
 
   cout << "All shapes:\n";
@@ -47,9 +51,11 @@ int App_circle::start() {
   for (const auto& shape : shapes) {
     shape->draw();
   }
+
   for (const auto& shape : shapes) {
     delete shape;
   }
+  
   return 0;
 
 }

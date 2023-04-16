@@ -1,4 +1,4 @@
-#include "Matrix_app.cpp"
+#include "AppMatrix.cpp"
 #include "Matrix.cpp"
 
 int main() {

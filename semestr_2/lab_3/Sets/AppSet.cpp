@@ -1,6 +1,6 @@
-#include "Set_app.h"
+#include "AppSet.h"
 
-int App_set::start() {
+int AppSet::start() {
 
     Subset s1{1, 3, 5};
     Subset s2{2, 4, 6};

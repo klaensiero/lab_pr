@@ -1,4 +1,4 @@
-#include "Matrix_app.h"
+#include "AppMatrix.h"
 
 int App_matrix::start() {
 
@@ -13,33 +13,33 @@ int App_matrix::start() {
     Matrix matrix5 = matrix1 * matrix2;
     Matrix matrix6 = matrix1 * scalar;
 
-    cout << "Matrix 1:" << endl;
+    cout << "Matrix 1:" << "\n";
     ShowMatrix::show(matrix1);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 2:" << endl;
+    cout << "Matrix 2:" << "\n";
     ShowMatrix::show(matrix2);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 1 + Matrix 2:" << endl;
+    cout << "Matrix 1 + Matrix 2:" << "\n";
     ShowMatrix::show(matrix3);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 1 - Matrix 2:" << endl;
+    cout << "Matrix 1 - Matrix 2:" << "\n";
     ShowMatrix::show(matrix4);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 1 * Matrix 2:" << endl;
+    cout << "Matrix 1 * Matrix 2:" << "\n";
     ShowMatrix::show(matrix5);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 1 * " << scalar << ":" << endl;
+    cout << "Matrix 1 * " << scalar << ":" << "\n";
     ShowMatrix::show(matrix6);
-    cout << endl;
+    cout << "\n";
 
-    cout << "Matrix 1 == Matrix 2: " << (matrix1 == matrix2) << endl;
-    cout << "Matrix 1 > Matrix 2: " << (matrix1 > matrix2) << endl;
-    cout << "Matrix 1 < Matrix 2: " << (matrix1 < matrix2) << endl;
+    cout << "Matrix 1 == Matrix 2: " << (matrix1 == matrix2) << "\n";
+    cout << "Matrix 1 > Matrix 2: " << (matrix1 > matrix2) << "\n";
+    cout << "Matrix 1 < Matrix 2: " << (matrix1 < matrix2) << "\n";
 
     return 0;
 

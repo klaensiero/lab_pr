@@ -1,6 +1,3 @@
-#ifndef MATRIX_H
-#define MATRIX_H
-
 #include <iostream>
 #include <vector>
 
@@ -19,5 +16,3 @@ public:
 
     std::vector<std::vector<double>> data;
 };
-
-#endif

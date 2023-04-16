@@ -1,6 +1,7 @@
-#include "Circle_draw.h"
+#include "DrawCircle.h"
 #include <iostream>
 #include <cmath>
+
 Circle::Circle(double radius) : _radius(radius) {}
 double Circle::area() const {
   return M_PI * _radius * _radius;

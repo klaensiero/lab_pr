@@ -1,8 +1,8 @@
-#include "Circle_draw.cpp"
+#include "Set.h"
 #include <iostream>
 using namespace std;
 
-class App_circle {
+class AppSet {
 public:
     int start();
 };
