@@ -2,7 +2,7 @@
 #include <vector>
 #include "AppParallelogram.h"
 
-int App_parallelogram::start() {
+int AppParallelogram::start() {
     vector<Parallelogram> shapes;
     char choice;
     do {
