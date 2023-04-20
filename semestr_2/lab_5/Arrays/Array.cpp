@@ -1,4 +1,5 @@
 #include "Array.h"
+#include "ArrayException.cpp"
 
 template <int N, class T>
 Array<N, T>::Array() {
@@ -11,8 +12,8 @@ Array<N, T>::Array() {
 template <int N, class T>
 
 T& Array<N, T>::operator[](int index) {
-    if (index < 0 || index >= N) {
-        throw std::out_of_range("Index out of range");
-    }
+
+    ArrayException::checkIndex(index, N);
+
     return elements[index];
 }
