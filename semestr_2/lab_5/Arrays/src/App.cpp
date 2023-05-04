@@ -9,7 +9,8 @@ int App::start() {
         arr[2] = 30;
         arr[3] = 40;
         arr[4] = 50;
-        int value = arr[5];
+
+        int value = arr[5]; // ошибка
 
         cout << "Value at index 5: " << value << "\n";
     } catch (exception const &ex) {

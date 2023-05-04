@@ -1,7 +1,6 @@
 #include <stdexcept>
 
-class ArrayException {
+class ArrayException : public std::out_of_range {
 public:
-   static void checkIndex(int index, int N);
+    explicit ArrayException(const char* msg) : std::out_of_range(msg) {}
 };
-
