@@ -1,3 +1,7 @@
+#include "EmptyBufferException.h"
+#include "OutOfRangeException.h"
+#include "InvalidCapacityException.h"
+
 template<typename T>
 
 class RingBuffer {

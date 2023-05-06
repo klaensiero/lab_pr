@@ -48,7 +48,7 @@ int App::start() {
     }
     cout << "\n";
 
-    buffer.resize(3);
+    buffer.resize(6);
     cout << "Buffer inside: ";
     for (int i = 0; i < buffer.getSize(); i++) {
         cout << buffer[i] << " ";
