@@ -48,7 +48,7 @@ void RingBuffer<T>::push_back(const T& value) {
 template<typename T>
 void RingBuffer<T>::pop_back() {
     if (isEmpty()) {
-        throw ReadFromEmptyBuffer("Attempted to read from an empty buffer.");
+        throw ReadFromEmptyBuffer();
     }
     size--;
 }
@@ -66,7 +66,7 @@ void RingBuffer<T>::push_front(const T& value) {
 template<typename T>
 void RingBuffer<T>::pop_front() {
     if (isEmpty()) {
-        throw ReadFromEmptyBuffer("Attempted to read from an empty buffer.");
+        throw ReadFromEmptyBuffer();
     }
     start = (start + 1) % capacity;
     size--;
@@ -75,7 +75,7 @@ void RingBuffer<T>::pop_front() {
 template<typename T>
 void RingBuffer<T>::insert(const T& value, int index) {
     if (index < 0 || index > size) {
-        throw OutOfRange("The range of a buffer is broken.");
+        throw OutOfRange();
     }
     if (isFull()) {
         erase(0);
@@ -91,7 +91,7 @@ void RingBuffer<T>::insert(const T& value, int index) {
 template<typename T>
 void RingBuffer<T>::erase(int index) {
     if (index < 0 || index >= size) {
-        throw OutOfRange("The range of a buffer is broken.");
+        throw OutOfRange();
     }
     int position = (start + index) % capacity;
     for (int i = position; i < start + size - 1; i++) {
@@ -118,11 +118,11 @@ T& RingBuffer<T>::back() {
 template<typename T>
 void RingBuffer<T>::resize(int newCapacity) {
     if (newCapacity <= 0) {
-        throw InvalidCapacityException("The size of a buffer is invalid.");
+        throw InvalidCapacity();
     }
 
     if (newCapacity < size) {
-        throw InvalidCapacityException("Attempted to overflow a buffer.");
+        throw InvalidCapacity();
     }
     
     T* newBuffer = new T[newCapacity];

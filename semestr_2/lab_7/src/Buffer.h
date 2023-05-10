@@ -1,6 +1,4 @@
-#include "EmptyBufferException.h"
-#include "OutOfRangeException.h"
-#include "InvalidCapacityException.h"
+#include "Exceptions.h"
 
 template<typename T>
 

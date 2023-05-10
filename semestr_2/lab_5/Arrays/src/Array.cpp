@@ -12,7 +12,7 @@ template <int N, class T>
 T& Array<N, T>::operator[](int index) {
 
     if (index < 0 || index >= N) {
-        throw ArrayException("Index out of range");
+        throw ArrayException();
     }
     
     return elements[index];
